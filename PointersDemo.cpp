@@ -6,8 +6,8 @@ using namespace std;
 int* duplicate(int *array, int size){
     int *newArray = new int[size * 2];
     for(int i = 0; i < size; i++){
-        newArray[i] = array[i];
-        newArray[i + size] = array[i];
+        newArray[i * 2] = array[i];
+        newArray[i * 2 + 1] = array[i];
     }
     return newArray;
 }
